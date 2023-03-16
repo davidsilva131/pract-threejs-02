@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 const Model = (props) => {
-  const { nodes, materials } = useGLTF('/public/models/camisa_01.gltf');
+  const { nodes, materials } = useGLTF('./models/camisa_01.gltf')
   return (
     <group {...props} dispose={null}>
       <group position={[0, -10, 0]} scale={0.1}>
@@ -293,5 +293,5 @@ const Model = (props) => {
   )
 }
 
-useGLTF.preload('/public/models/camisa_01.gltf')
+useGLTF.preload('./models/camisa_01.gltf')
 export default Model
